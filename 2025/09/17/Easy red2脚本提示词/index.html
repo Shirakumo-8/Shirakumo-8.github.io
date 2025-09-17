@@ -1,0 +1,1008 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Easy red2脚本提示词 | はつづき の Blog</title><meta name="author" content="はつづき"><meta name="copyright" content="はつづき"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Easy red2脚本提示词 以下为正文 方便复制使用Additional Context:This Lua script is intended for the Easy Red 2 videogame. The script(s) must be written in basic Lua and may only use the Easy Red 2 custom functions.The">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Easy red2脚本提示词">
+<meta property="og:url" content="http://example.com/2025/09/17/Easy%20red2%E8%84%9A%E6%9C%AC%E6%8F%90%E7%A4%BA%E8%AF%8D/index.html">
+<meta property="og:site_name" content="はつづき の Blog">
+<meta property="og:description" content="Easy red2脚本提示词 以下为正文 方便复制使用Additional Context:This Lua script is intended for the Easy Red 2 videogame. The script(s) must be written in basic Lua and may only use the Easy Red 2 custom functions.The">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
+<meta property="article:published_time" content="2025-09-17T08:11:00.000Z">
+<meta property="article:modified_time" content="2025-09-17T08:13:05.304Z">
+<meta property="article:author" content="はつづき">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2025/09/17/Easy%20red2%E8%84%9A%E6%9C%AC%E6%8F%90%E7%A4%BA%E8%AF%8D/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Easy red2脚本提示词',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">はつづき の Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Easy red2脚本提示词</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">Easy red2脚本提示词</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-09-17T08:11:00.000Z" title="Created 2025-09-17 16:11:00">2025-09-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-09-17T08:13:05.304Z" title="Updated 2025-09-17 16:13:05">2025-09-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">博客教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="Easy-red2脚本提示词-以下为正文-方便复制使用"><a href="#Easy-red2脚本提示词-以下为正文-方便复制使用" class="headerlink" title="Easy red2脚本提示词 以下为正文 方便复制使用"></a>Easy red2脚本提示词 以下为正文 方便复制使用</h1><p>Additional Context:<br>This Lua script is intended for the Easy Red 2 videogame. The script(s) must be written in basic Lua and may only use the Easy Red 2 custom functions.<br>The scripts need to be very performant and have high delay sleep() calls in loops.<br>If waypoints, string ids (like loadouts, items and vehicles) are given, please declare them in variables at the beginning of the lua code along with appropriate comments wrapping the editable section to make it easier for the user to edit them. Consider that you might not know all the ids, but the user has easy access to them in the game.<br>Don’t use commands that are either not part of the Easy Red 2 scripting API documentation or builtin MoonSharp Lua instructions. Also if something doesn’t seem to be possible with avalable apis, simply explain why. Also be short in answer to provide a faster reply.</p>
+<p>This script is intended to run on a mission phase, so it will run every time a phase starts, and can be interrupted by force when the mission phase changes. In case of host migration this mission phase script will be transferred to the new host and the code will run again, so if necessary make sure to use global.set and global.get to check variables to avoid redundant initialization.</p>
+<pre><code>  Overview
+  
+    The Easy Red 2 Scripting System is an optional add-on that allows you to create new game modes and customize missions as well as AI and soldier behaviors. It works alongside the default Mission Editor and enables you to:
+  
+  
+    Script mission phases to create new objective types (e.g., destroy a specific vehicle, eliminate a particular unit, reach a destination, trigger explosions, etc.).
+    Script soldiers and AIs to control behavior, disable functionalities, force actions, or even trigger in-game dialogue.
+  
+  
+    The system leverages Lua, meaning you have access to all standard Lua features like tests, loops, functions, and conditions. For general Lua language documentation, please refer to the 
+    Lua Documentation.
+  
+  
+    For Easy Red 2–specific Lua commands and further examples, check out our dedicated scripting wiki.
+  
+
+
+
+
+  Important Tools
+  
+    While making your scripts, you might need some extra data to use in your scripts such as Ids to spawn vehicles, acquire vanilla loadouts, spawn items, acquire vanilla and modded factions.
+  
+  
+    You can acquire string Ids from the Id tables section in the Script Settings. By selecting any object you&#39;ll copy it&#39;s Id into the clipboard.
+    You might also need to acquire 3D world positions. You can copy a vec3(...) world position for lua code by pressing P.A vec3(...) position will be acquired from cursor position and copied into the clipboard to use it in your code.
+  
+
+
+
+
+
+  Scripting Mission Phases
+  
+    It is possible to run a script at the beginning of each mission phase. The script starts executing when the phase begins and is interrupted when a new phase starts or when it has finished executing. If a previously run phase is started again, the script will run once more.
+  
+  
+    Within the Mission Editor UI, you will find a script button:
+  
+  
+    
+  
+  
+    Clicking this button opens a code editor that allows you to edit the script for the current phase. To save your changes, simply close the editor by clicking the red cross:
+  
+  
+    
+  
+  
+    Additionally, scripts are stored in a dedicated subfolder of the mission folder. This allows you to edit them using an external code editor if you prefer:
+  
+  
+    
+  
+  
+    When playing offline, your machine runs all the scripts. In online matches, the phase script runs on the master client only, although most scripting commands generate actions synchronized across all players.
+  
+  
+    Note: If the master client leaves, a new one is assigned and the phase script will run from the beginning on that machine. For this reason, it is recommended to use the global class to set global variables that keep track of the phase state, ensuring that operations already performed are not unnecessarily repeated.
+  
+  
+    Below is an example of a mission phase script:
+  
+  
+    -- Mission Phase Script Example
+</code></pre>
+<p>– check if a certain “target_spawned” global boolean variable have been set already;<br>– If not, then the script is running for the first time in this phase<br>– and we want to do the initialization actions, like spawning targets<br>if not global.get(“targets_spawned”) then<br>    print(“Spawning targets to eliminate…”)<br>    – Perform targets spawn operations here …</p>
+<pre><code>-- Next, set the &quot;targets_spawned&quot; to true,
+-- so if this script will run again* we know that this action has performed.
+global.set(true, &quot;targets_spawned&quot;)
+
+-- *Why could the script run again?
+-- Phase script is executed every time the phase starts (or re-start)
+-- or whenever the host has changed
+</code></pre>
+<p>end</p>
+<p>– Example of main phase loop<br>local phaseCompleted &#x3D; false<br>while not phaseCompleted do<br>    sleep(3) – always recommended to put some wait time on every loop!</p>
+<pre><code>if checkTargetsStillAlive() then -- dummy function
+    phaseCompleted = true
+end
+</code></pre>
+<p>end</p>
+<p>–loop is done so continue with next phase…<br>er2.nextPhase()</p>
+<pre><code>  Scripting AI &amp;amp; Soldier Behavior
+  
+    In addition to mission phases, you can script the behavior of AI and soldiers. This is done through the Script Editor where you can create, edit, and delete AI scripts.
+  
+  
+    In the Script Editor, navigate to the Script Settings menu:
+  
+  
+    
+  
+  
+    
+  
+  
+    AI scripts can be assigned in two ways:
+  
+  
+    
+      Assign via Squad Spawner: When a script is assigned to a squad spawner, it is automatically injected into every AI unit of that squad.
+      
+        
+      
+    
+    
+      Manual Assignment: You can also assign a script via Lua code when spawning a unit in a mission phase script.
+    
+  
+  
+    For example, you might assign an AI script manually like this:
+  
+  
+    -- AI Script Assignment Example
+    --spawn an unit
+</code></pre>
+<p>local aiUnit &#x3D; spawnSoldier(vec3(10,0,10), “England_allies”, 0, “eng_infantry_gunner”)</p>
+<p>if aiUnit then<br>    – give the unit some lua script<br>    aiUnit.setBrain(“ai_patrol.lua”)<br>end</p>
+<pre><code>    Note that the Id &quot;eng_infantry_gunner&quot; (and other vanilla loadout Ids) and the Faction Id &quot;England_allies&quot; (and other vanilla and modded squad Ids) can be acquired trough the Id tables section in the Script Settings menu.
+  
+  
+    AI scripts run locally on the owner’s machine. When using a squad spawner, the entire squad is owned by you so the script executes on your computer. However, AI squads are ultimately managed by the master client – including their Lua scripts.
+  
+  
+    Important: If a player leaves an online match, their units (and associated scripts) transfer to the master client, where the scripts will restart. It is therefore recommended to use the global class to verify whether certain operations should be skipped on a fresh run.
+  
+  
+    Like phase scripts, AI scripts are stored in their own subfolder within the mission folder, making them accessible for external editing.
+  
+  
+    
+  
+  
+    A notable feature in soldier scripts is the myself() function, which returns a reference to the Soldier class instance running the script. This allows you to call specific soldier functions directly.
+  
+  
+    For example, a soldier script might look like this:
+  
+  
+    -- Get the unit which is running this script
+</code></pre>
+<p>local soldier &#x3D; myself()</p>
+<p>– Make the unit play the VoiceClip.scream_long clip every 5 seconds while being alive<br>while sold.isAlive() do<br>    sold.say(VoiceClip.scream_long)<br>    sleep(5)<br>end</p>
+<h2 id="Easy-Red-2-Scripting-API"><a href="#Easy-Red-2-Scripting-API" class="headerlink" title="Easy Red 2 Scripting API:"></a>Easy Red 2 Scripting API:</h2><p>Function: allowBeingTargeted (Class: AiParams)<br>Description: If enabled, enemies will target this soldier whenever they see him. If disabled, the soldier will be completly ignored by enemies.<br>Toghether with allowCheckForEnemies, this function is helpful to script systems like Civilian or Non combatant medics.<br>Parameters:</p>
+<ul>
+<li>set_enabled (bool)</li>
+</ul>
+<hr>
+<p>Function: allowChangePose (Class: AiParams)<br>Description: When enabled, AI will change pose depending on cover, suppression and other situations. Disable this function if you want to control soldier’s pose by custom scripting<br>Parameters:</p>
+<ul>
+<li>set_enabled (bool)</li>
+</ul>
+<hr>
+<p>Function: allowCheckForEnemies (Class: AiParams)<br>Description: When enabled, AI will check for enemies around and target them. When this function is disabled AI will not search and target enemies. Useful for custom AI implementations<br>Parameters:</p>
+<ul>
+<li>set_enabled (bool)</li>
+</ul>
+<hr>
+<p>Function: allowDoMedic (Class: AiParams)<br>Description: When this function is enabled, if a soldier has medic equipments in his inventory he will proceed to heal nearby units<br>Parameters:</p>
+<ul>
+<li>set_enabled (bool)</li>
+</ul>
+<hr>
+<p>Function: allowFindCoverWhenSuppressed (Class: AiParams)<br>Description: When enabled, AI will automatically find cover when suppressed. If you want to move the AI trough custom scripting, you most likely want to disable this feature<br>Parameters:</p>
+<ul>
+<li>set_enabled (bool)</li>
+</ul>
+<hr>
+<p>Function: allowFollowOrders (Class: AiParams)<br>Description: When enabled, AI will automatically follow squad leader orders. If you want to move this specific unit with your custom scripts, for example by using Soldier.moveTo function, most likely you want this to be disabled<br>Parameters:</p>
+<ul>
+<li>set_enabled (bool)</li>
+</ul>
+<hr>
+<p>Function: allowGiveOrders (Class: AiParams)<br>Description: When enabled, AI will automatically give orders to the squad if squad leader. If you want to give orders to a squad with your custom scripts, for example by using Squad.moveTo function, most likely you want this to be disabled<br>Parameters:</p>
+<ul>
+<li>set_enabled (bool)</li>
+</ul>
+<hr>
+<p>Function: allowLeaveVehicle (Class: AiParams)<br>Description: When enabled, AI will leave vehicle when necessary. If you want to control which vehicle the AI should use or force an AI never to leave a vehicle, you might want to disable this feature<br>Parameters:</p>
+<ul>
+<li>set_enabled (void)</li>
+</ul>
+<hr>
+<p>Function: allowMovements (Class: AiParams)<br>Description: When enabled, AI will perform move commands. if you don’t want the AI never to move, not even with moveTo commands, disable this feature<br>Parameters:</p>
+<ul>
+<li>set_enabled (bool)</li>
+</ul>
+<hr>
+<p>Function: allowOpenWindows (Class: AiParams)<br>Description: When enabled, AI will open windows that blocks it’s vision, for example when in cover behind a window<br>Parameters:</p>
+<ul>
+<li>set_enabled (bool)</li>
+</ul>
+<hr>
+<p>Function: allowRadioOrders (Class: AiParams)<br>Description: When enabled and if radioman, AI will communicate radio orders requested by squad leader<br>Parameters:</p>
+<ul>
+<li>set_enabled (Weapon)</li>
+</ul>
+<hr>
+<p>Function: enableAiBehaviour (Class: AiParams)<br>Description: This function enables or disbales all AI functionalities toghether, including:<br>allowChangePose, allowCheckForEnemies, allowFindCoverWhenSuppressed, allowLeaveVehicle, allowMovements, allowOpenWindows, allowOrders and allowRadioOrders<br>Parameters:</p>
+<ul>
+<li>set_enabled (bool)</li>
+</ul>
+<hr>
+<p>Function: findObjective (Class: AiParams)<br>Description: Find an objective from it’s unique Id (network safe).<br>Useful in case you have to reference a specific objective across different phases or players, based on it’s unique Id, for example, passed trough a global variable<br>Returns: Objective corresponding to the provided Id<br>Parameters:</p>
+<ul>
+<li>objective_id (integer)</li>
+</ul>
+<hr>
+<p>Function: followCustomDirectCommands (Class: AiParams)<br>Description: Disable various AI behaviors in order to prepare the soldier to follow direct commands, such as soldier.moveTo()</p>
+<hr>
+<p>Function: followCustomSquadOrders (Class: AiParams)<br>Description: Normally squad soldiers will automatically give the orders that they cosndier the best according to the situation. This function disables various AI behaviors in order to prepare the soldier to only follow and give custom squad orders via code, such as squad.moveTo()<br>Returns: this function doesn’t return anything</p>
+<hr>
+<p>Function: getName (Class: AiParams)<br>Description: Return the name of the vehicle<br>Returns: Name of the vehicle</p>
+<hr>
+<p>Function: setTargetPlanesOften (Class: AiParams)<br>Description: Enable this feature to force the AI to target planes, if closer than any other spotted enemy<br>Parameters:</p>
+<ul>
+<li>set_enabled (bool)</li>
+</ul>
+<hr>
+<p>Function: #include (Class: Base Functions)<br>Description: Include an external file into the code of a lua script. Useful to create files with collections of functions to share across different script. Included files must be placed within the folder ‘[mission folder]&#x2F;scripts&#x2F;general&#x2F;‘ or any subfolder. The script will be pre-processed and aded to the final code before executing it<br>Parameters:</p>
+<ul>
+<li>filePathName (string)</li>
+</ul>
+<hr>
+<p>Function: distance (Class: Base Functions)<br>Description: The distance between 2 Vector3 points in meters<br>Returns: The distance between 2 points in meters<br>Parameters:</p>
+<ul>
+<li>pos1 (vec3)</li>
+<li>pos2 (vec3)</li>
+</ul>
+<hr>
+<p>Function: log (Class: Base Functions)<br>Description: Log some text in the F3 console. This helps a lot with testing custom Lua code. press F3 to open the console and visualize the log<br>Parameters:</p>
+<ul>
+<li>text (string)</li>
+</ul>
+<hr>
+<p>Function: print (Class: Base Functions)<br>Description: Display a message on the screen<br>Parameters:</p>
+<ul>
+<li>message (string)</li>
+<li>duration (float)</li>
+</ul>
+<hr>
+<p>Function: round (Class: Base Functions)<br>Description: Round a number to a specific quantity to decimal points<br>Returns: Rounded value<br>Parameters:</p>
+<ul>
+<li>numberToRound (float)</li>
+<li>decimalPoint (integer)</li>
+</ul>
+<hr>
+<p>Function: sleep (Class: Base Functions)<br>Description: Pause the execution of the LUA script for some time. Notice: this is very helpful to give some pause to the CPU, expecially during ‘while’ and ‘for’ loops<br>Parameters:</p>
+<ul>
+<li>waitTime (float)</li>
+</ul>
+<hr>
+<p>Function: spawnHuman (Class: Base Functions)<br>Description: Spawn a new human without specific loadout or rank. Faction Ids can be acquired in the Script Settings menu -&gt; Id tables section<br>Returns: Reference to the spawned human<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+<li>faction_id (string)</li>
+</ul>
+<hr>
+<p>Function: spawnMissionObjective (Class: Base Functions)<br>Description: Spawn a Scriptable Mission Objective on current active phase and it’s relative 3D Marker on the current phase. Only the master client can spawn and handle a Mission Objective.<br>A Scriptable Objective doesn’t do anything in particular on it’s own. The user must make sure to update it’s progress value, text, and other parameters on it’s own, otherwise it will just act as a 3D Marker.<br>For icon Ids see setIcon.<br>Returns: A reference to the created Mission Objective<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+<li>radius (float)</li>
+<li>text (string)</li>
+<li>icon (integer)</li>
+<li>isAttractor (bool)</li>
+</ul>
+<hr>
+<p>Function: spawnSoldier (Class: Base Functions)<br>Description: Spawn an AI soldier. Faction Ids and loadout Ids can be acquired in the Script Settings menu -&gt; Id tables section<br>Returns: Reference to the spawned soldier<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+<li>faction_id (string)</li>
+<li>rank (integer)</li>
+<li>loadout (string)</li>
+</ul>
+<hr>
+<p>Function: spawnSoldierOnVehicle (Class: Base Functions)<br>Description: Spawn an AI soldier on a vehicle. Faction Ids and loadout Ids can be acquired in the Script Settings menu -&gt; Id tables section<br>Returns: Reference to the spawned soldier<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+<li>faction_id (string)</li>
+<li>rank (integer)</li>
+<li>loadout (string)</li>
+<li>vehicle_reference (Vehicle)</li>
+</ul>
+<hr>
+<p>Function: spawnSquad (Class: Base Functions)<br>Description: Spawn an AI squad. Faction Ids and Squad Ids can be acquired in the Script Settings menu -&gt; Id tables section. Can spawn custom squads made with Squad Editor<br>Returns: Reference to the spawned squad<br>Parameters:</p>
+<ul>
+<li>pos (vec3)</li>
+<li>radius (float)</li>
+<li>faction_id (string)</li>
+<li>squad_id (string)</li>
+</ul>
+<hr>
+<p>Function: spawnSquadOnVehicle (Class: Base Functions)<br>Description: Spawn an AI squad inside a given vehicle. Faction Ids and Squad Ids can be acquired in the Script Settings menu -&gt; Id tables section. Vehicle crew squads will automatically fit the seats inside the vehicle. Can spawn custom squads made with Squad Editor<br>Returns: Reference to the spawned squad<br>Parameters:</p>
+<ul>
+<li>pos (vec3)</li>
+<li>radius (float)</li>
+<li>faction_id (string)</li>
+<li>squad_id (string)</li>
+<li>vehicle (Vehicle)</li>
+</ul>
+<hr>
+<p>Function: spawnSquadOnVehicle_script (Class: Base Functions)<br>Description: Spawn an AI squad inside a given vehicle, and assign a script to each AI. Faction Ids and Squad Ids can be acquired in the Script Settings menu -&gt; Id tables section. Vehicle crew squads will automatically fit the seats inside the vehicle. Can spawn custom squads made with Squad Editor<br>Returns: Reference to the spawned squad<br>Parameters:</p>
+<ul>
+<li>pos (vec3)</li>
+<li>radius (float)</li>
+<li>faction_id (string)</li>
+<li>squad_id (string)</li>
+<li>vehicle (Vehicle)</li>
+<li>filename (string)</li>
+</ul>
+<hr>
+<p>Function: spawnSquad_script (Class: Base Functions)<br>Description: Spawn an AI squad and assign a script to each AI. Faction Ids and Squad Ids can be acquired in the Script Settings menu -&gt; Id tables section. Can spawn custom squads made with Squad Editor<br>Returns: Reference to the spawned squad<br>Parameters:</p>
+<ul>
+<li>pos (vec3)</li>
+<li>radius (float)</li>
+<li>faction_id (string)</li>
+<li>squad_id (string)</li>
+<li>filename (string)</li>
+</ul>
+<hr>
+<p>Function: spawnVehicle (Class: Base Functions)<br>Description: Spawn a vehicle. Vehicle Ids can be acquired in the Script Settings menu -&gt; Id tables section<br>Returns: Reference to the vehicle<br>Parameters:</p>
+<ul>
+<li>vehicle_id (string)</li>
+<li>position (vec3)</li>
+<li>rotation (vec3)</li>
+</ul>
+<hr>
+<p>Function: spawnVehicle_camo (Class: Base Functions)<br>Description: Spawn a vehicle with a specified camo. Vehicle Ids can be acquired in the Script Settings menu -&gt; Id tables section<br>Returns: Reference to the vehicle<br>Parameters:</p>
+<ul>
+<li>vehicle_id (string)</li>
+<li>position (vec3)</li>
+<li>rotation (vec3)</li>
+<li>camo_id (integer)</li>
+</ul>
+<hr>
+<p>Function: spawnVehicle_camo_dest (Class: Base Functions)<br>Description: Spawn a vehicle with a specified camo and give it a destination. For Auto-Transport vehicles, this is where units will be deployed. Vehicle Ids can be acquired in the Script Settings menu -&gt; Id tables section<br>Returns: Reference to the vehicle<br>Parameters:</p>
+<ul>
+<li>vehicle_id (string)</li>
+<li>position (vec3)</li>
+<li>rotation (vec3)</li>
+<li>camo_id (integer)</li>
+<li>destination (vec3)</li>
+</ul>
+<hr>
+<p>Function: spawnVehicle_dest (Class: Base Functions)<br>Description: Spawn a vehicle and give it a destination. For Auto-Transport vehicles, this is where units will be deployed. Vehicle Ids can be acquired in the Script Settings menu -&gt; Id tables section<br>Returns: Reference to the vehicle<br>Parameters:</p>
+<ul>
+<li>vehicle_id (string)</li>
+<li>position (vec3)</li>
+<li>rotation (vec3)</li>
+<li>destination (vec3)</li>
+</ul>
+<hr>
+<p>Function: waitForAny (Class: Base Functions)<br>Description: Pause the execution of the script until any of the given conditions are met.<br>Parameters:</p>
+<ul>
+<li>conditions (function)</li>
+</ul>
+<hr>
+<p>Function: waitUntil (Class: Base Functions)<br>Description: Pause the execution of the script until one or multiple conditions are met.<br>Parameters:</p>
+<ul>
+<li>condition (function)</li>
+</ul>
+<hr>
+<p>Function: addInvadersTickets (Class: er2)<br>Description: Adds tickets to the current invaders faction.<br>Parameters:</p>
+<ul>
+<li>ticketsToAdd (integer)</li>
+</ul>
+<hr>
+<p>Function: cameraPosition (Class: er2)<br>Description: Get the world position of the camera<br>Returns: World position of the camera in the level</p>
+<hr>
+<p>Function: clearAllRunOnJoin (Class: er2)<br>Description: Clear all buffered requests to run a script locally for joining users<br>Returns: this function doesn’t return anything</p>
+<hr>
+<p>Function: countAliveDefenders (Class: er2)<br>Description: Get the count of all the currently alive defenders<br>Returns: Count of the alive defenders</p>
+<hr>
+<p>Function: countAliveInFaction (Class: er2)<br>Description: Get the count of all the currently alive units on a specific faction<br>Returns: Count of the alive units under the given faction Id<br>Parameters:</p>
+<ul>
+<li>faction_id (string)</li>
+</ul>
+<hr>
+<p>Function: countAliveInvaders (Class: er2)<br>Description: Get the count of all the currently alive invaders<br>Returns: Count of the alive invaders</p>
+<hr>
+<p>Function: countDeceasedDefenders (Class: er2)<br>Description: Count how many defenders are deceased during the mission<br>Returns: Amount of deceased defenders</p>
+<hr>
+<p>Function: countDeceasedInvaders (Class: er2)<br>Description: Count how many invaders are deceased during the mission<br>Returns: Amount of deceased invaders</p>
+<hr>
+<p>Function: countLostVehiclesDefenders (Class: er2)<br>Description: Count how many defenders have been captured during the mission<br>Returns: Amount of prisoners. This doesn’t include prisoners that have been freed</p>
+<hr>
+<p>Function: countLostVehiclesInvaders (Class: er2)<br>Description: Count how many invaders have been captured during the mission<br>Returns: Amount of prisoners. This doesn’t include prisoners that have been freed</p>
+<hr>
+<p>Function: countPrisonersDefenders (Class: er2)<br>Description: Count how many vehicles have been lost by the defenders during the mission<br>Returns: Amount of deceased lost vehicles</p>
+<hr>
+<p>Function: countPrisonersInvaders (Class: er2)<br>Description: Count how many vehicles have been lost by the invaders during the mission<br>Returns: Amount of deceased lost vehicles</p>
+<hr>
+<p>Function: endPrecipitation (Class: er2)<br>Description: Stops the rain or the snow from falling in the map<br>To synchronize the weather changes to other clients you can use synchWeather.</p>
+<hr>
+<p>Function: explosion (Class: er2)<br>Description: Generates an explosion<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+<li>maxDamage (float)</li>
+<li>maxPenetration (float)</li>
+<li>radius (float)</li>
+</ul>
+<hr>
+<p>Function: findSoldier (Class: er2)<br>Description: Find a soldier from it’s unique Id (network safe).<br>Useful in case you have to reference a specific soldier across different phases or players, based on it’s unique Id, for example, passed trough a global variable<br>Returns: Soldier corresponding to the provided Id<br>Parameters:</p>
+<ul>
+<li>unique_id (integer)</li>
+</ul>
+<hr>
+<p>Function: findVehicle (Class: er2)<br>Description: Find a vehicle from it’s unique Id (network safe).<br>Useful in case you have to reference a specific vehicle across different phases or players, based on it’s unique Id, for example, passed trough a global variable<br>Returns: Vehicle corresponding to the provided Id<br>Parameters:</p>
+<ul>
+<li>unique_id (integer)</li>
+</ul>
+<hr>
+<p>Function: getAllObjectives (Class: er2)<br>Description: Get all Mission Objectives in the current phase.<br>Parameters:</p>
+<ul>
+<li>out_table_result (Table)</li>
+<li>includeNonAiAttractors (bool)</li>
+</ul>
+<hr>
+<p>Function: getAllSoldiers (Class: er2)<br>Description: Get all alive soldiers.<br>Notice: After a new soldier spawns or dies, this function might get a few instant before returning a correctly updated value.<br>Parameters:</p>
+<ul>
+<li>tableToFill (Table)</li>
+</ul>
+<hr>
+<p>Function: getAllVehicles (Class: er2)<br>Description: Get all vehicles around the map<br>Parameters:</p>
+<ul>
+<li>table_to_fill (Table)</li>
+</ul>
+<hr>
+<p>Function: getBattleName (Class: er2)<br>Description: Returns the current battle’s name<br>Returns: The current battle name</p>
+<hr>
+<p>Function: getCurrentPhaseId (Class: er2)<br>Description: Get the Id of the current phases.<br>Returns: Id of the current phase (Range is [0,…,n] where n is the number of phases -1)</p>
+<hr>
+<p>Function: getDefendersFaction (Class: er2)<br>Description: Get the Id for the defenders faction<br>Returns: Id of the defenders faction</p>
+<hr>
+<p>Function: getDistanceFromTerrain (Class: er2)<br>Description: Returns the distance between the given position and the terrain.<br>Returns: Important: if the given position is under the terrain, will return a negative distance<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+<li>clampToWaterHeight (bool)</li>
+</ul>
+<hr>
+<p>Function: getInvadersFaction (Class: er2)<br>Description: Get the Id for the invaders faction<br>Returns: Id of the invaders faction</p>
+<hr>
+<p>Function: getInvadersTicket (Class: er2)<br>Description: Returns the number of tickets left by the invaders<br>Returns: The current tickets left by the invaders</p>
+<hr>
+<p>Function: getMapName (Class: er2)<br>Description: Returns the name of the map of the current battle<br>Returns: The name of the current battle’s map</p>
+<hr>
+<p>Function: getMyNickname (Class: er2)<br>Description: Get nickname of the local user<br>Returns: Nickname of the local user</p>
+<hr>
+<p>Function: getNearestObjective (Class: er2)<br>Description: Get the nearest Mission Objective to a specific location<br>Returns: Reference to the closest Mission Objective<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+<li>search_radius (float)</li>
+<li>includeNonAiAttractors (bool)</li>
+</ul>
+<hr>
+<p>Function: getNearestSoldier (Class: er2)<br>Description: Get nearest soldier to a specific location<br>Returns: Returns the nearest soldier, nil if nothing is found<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+<li>maxDistance (bool)</li>
+</ul>
+<hr>
+<p>Function: getNearestVehicle (Class: er2)<br>Description: Get nearest vehicle from a specific location<br>Returns: Nearest vehicle from a location, nil if any vehicle is found.<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+<li>radius (float)</li>
+</ul>
+<hr>
+<p>Function: getNickname (Class: er2)<br>Description: Get nickname of an online player<br>Returns: Nickname of the player<br>Parameters:</p>
+<ul>
+<li>online_id (string)</li>
+</ul>
+<hr>
+<p>Function: getPlayer (Class: er2)<br>Description: Find a reference to the Soldier controlled by the player<br>Returns: Reference to the Soldier controlled by the player. Null if any</p>
+<hr>
+<p>Function: getSettingMaxAllies (Class: er2)<br>Description: Get the max allies threshold set during match creation. It is suggested to use this value to measure the amount of AI to spawn according to player preference. This can be used to impact gameplay balancing and performance.<br>Returns: Max allies threshold set for the match</p>
+<hr>
+<p>Function: getSettingMaxAxis (Class: er2)<br>Description: Get the max axis threshold set during match creation. It is suggested to use this value to measure the amount of AI to spawn according to player preference. This can be used to impact gameplay balancing and performance.<br>Returns: Max axis threshold set for the match</p>
+<hr>
+<p>Function: getSettingMaxPlayersDefenders (Class: er2)<br>Description: Get the max allowed amount of Human Players on the defenders faction. Works only during multiplayer matches<br>Returns: Max allowed amount of Human Players on the defenders faction</p>
+<hr>
+<p>Function: getSettingMaxPlayersInvaders (Class: er2)<br>Description: Get the max allowed amount of Human Players on the invaders faction. Works only during multiplayer matches<br>Returns: Max allowed amount of Human Players on the invaders faction</p>
+<hr>
+<p>Function: getSettingTicketsMultiplier (Class: er2)<br>Description: Get the tickets multipler set during match creation<br>Returns: Tickets multiplier set for the match</p>
+<hr>
+<p>Function: getSoldiersInArea (Class: er2)<br>Description: Get all alive soldiers within a specific radius from a specific position, ordered by the distance from the given position.<br>Notice: After a new soldier spawns or dies, this function might get a few instant before returning a correctly updated value.<br>Returns: The script fills the Table given as parameter with the found soldiers, indexing it from 1,…,n ordered by distance from the given position and returns the filled table<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+<li>maxDistance (float)</li>
+<li>tableToFill (Table)</li>
+</ul>
+<hr>
+<p>Function: getTerrainHeight (Class: er2)<br>Description: Returns the terrain height from sea level of the given x and z coordinates.<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+</ul>
+<hr>
+<p>Function: getVehiclesInArea (Class: er2)<br>Description: Get all vehicles within a specific area<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+<li>radius (float)</li>
+<li>table_to_fill (Table)</li>
+</ul>
+<hr>
+<p>Function: isAllied (Class: er2)<br>Description: Check if a given faction Id is part of Allies faction<br>Returns: True if the given faction Id refers is part of Allies faction<br>Parameters:</p>
+<ul>
+<li>faction_id (string)</li>
+</ul>
+<hr>
+<p>Function: isAxis (Class: er2)<br>Description: Check if a given faction Id is part of Axis faction<br>Returns: True if the given faction Id refers is part of Axis faction<br>Parameters:</p>
+<ul>
+<li>faction_id (string)</li>
+</ul>
+<hr>
+<p>Function: isCivilian (Class: er2)<br>Description: Check if a given faction Id is part of Civilians faction<br>Returns: True if the given faction Id refers is part of Civilians faction<br>Parameters:</p>
+<ul>
+<li>faction_id (string)</li>
+</ul>
+<hr>
+<p>Function: isInsideMainTerrainBounds (Class: er2)<br>Description: Checks if the given position is inside the terrain bounds<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+</ul>
+<hr>
+<p>Function: isMasterClient (Class: er2)<br>Description: Check if current user is master client for online match. In an offline mission, the user is always the master client<br>Returns: True if user is online match master client, or if match is being played offline</p>
+<hr>
+<p>Function: isOnline (Class: er2)<br>Description: Check if current mission is being played on an online match</p>
+<hr>
+<p>Function: isSameFaction (Class: er2)<br>Description: Check if two faction Ids are part of the same faction (Allies or Axis)<br>Returns: True if thw two faction Ids are part of the same faction (Allies or Axis)<br>Parameters:</p>
+<ul>
+<li>faction_id1 (string)</li>
+<li>faction_id2 (string)</li>
+</ul>
+<hr>
+<p>Function: makeSquad (Class: er2)<br>Description: Create a new empty squad. You can add soldiers to this squad in order to make them react to squad orders<br>Returns: A new empty squad</p>
+<hr>
+<p>Function: nextPhase (Class: er2)<br>Description: Force mission to skip to next phase<br>Returns: If previous phase was last phase, returns true and conclude the mission</p>
+<hr>
+<p>Function: nuke (Class: er2)<br>Description: Generate a nuke explosion at a certain position. The nuke will devastate a certain area and will spawn a huge explosion visual effect with a never-ending smoke effect. Having multiple nuke smokes leftovers in a map can cause severe performance issues, so use this carefully.<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+</ul>
+<hr>
+<p>Function: playClip (Class: er2)<br>Description: Play a global Audio Clip (.wav)<br>Parameters:</p>
+<ul>
+<li>clipName (string)</li>
+<li>sync (bool)</li>
+<li>volume (float)</li>
+<li>maxDuration (float)</li>
+<li>loop (bool)</li>
+</ul>
+<hr>
+<p>Function: playClip3D (Class: er2)<br>Description: Play a 3D Audio Clip, coming from a specific location and with a maximum hear distance (.wav).<br>Notice: In various occasions, such as host change, a phase script might restart, so make use of set and get to check whenever set to be played in loop forever was already initialized to avoid spawning it multiple times.<br>Returns: this function doesn’t return anything<br>Parameters:</p>
+<ul>
+<li>clipName (string)</li>
+<li>location (vec3)</li>
+<li>range (float)</li>
+<li>sync (bool)</li>
+<li>volume (float)</li>
+<li>maxDuration (float)</li>
+<li>loop (bool)</li>
+</ul>
+<hr>
+<p>Function: playClipOnRadio (Class: er2)<br>Description: Play a global Audio Clip with a radio distortion effect (.wav)<br>Returns: this function doesn’t return anything<br>Parameters:</p>
+<ul>
+<li>clipName (string)</li>
+<li>sync (bool)</li>
+<li>delay (float)</li>
+</ul>
+<hr>
+<p>Function: playClipOnRadio3D (Class: er2)<br>Description: Play a 3D Audio Clip, coming from a specific location and with a maximum hear distance with a radio distortion effect (.wav)<br>Returns: this function doesn’t return anything<br>Parameters:</p>
+<ul>
+<li>clipName (string)</li>
+<li>location (vec3)</li>
+<li>sync (bool)</li>
+<li>delay (float)</li>
+</ul>
+<hr>
+<p>Function: playMusic (Class: er2)<br>Description: Plays a music track globally.<br>Parameters:</p>
+<ul>
+<li>clip_name (string)</li>
+<li>force_volume (float)</li>
+</ul>
+<hr>
+<p>Function: previousPhase (Class: er2)<br>Description: Force mission to skip to previous phase<br>Returns: If next phase is first phase, returns true and conclude the mission (defenders won)</p>
+<hr>
+<p>Function: raycast (Class: er2)<br>Description: Casts a ray from an origin toward a direction. Used to test collisions and objects presence.<br>The test is done trough a Unity Raycast.<br>Returns: Returns the distance from the ray’s origin to the impact point.<br>Returns -1 if the ray doesn’t intersects with any Collider.<br>Parameters:</p>
+<ul>
+<li>startPos (vec3)</li>
+<li>direction (vec3)</li>
+<li>maxDistance (float)</li>
+</ul>
+<hr>
+<p>Function: require (Class: er2)<br>Description: Equivalent to default Lua require function, but handles the script paths as local misison paths, to ensure easier file referencing and compatibility with Xbox, Nintendo Switch and PlayStation systems.<br>External file must be placed within the folder ‘[mission folder]&#x2F;scripts&#x2F;general&#x2F;‘ or any subfolder<br>Parameters:</p>
+<ul>
+<li>localPath (string)</li>
+</ul>
+<hr>
+<p>Function: resetCallback (Class: er2)<br>Description: Unassign a callback by it’s Id.<br>Returns: True if the callback was correctly unassigned<br>Parameters:</p>
+<ul>
+<li>callback_id (string)</li>
+</ul>
+<hr>
+<p>Function: resetCallbacks (Class: er2)<br>Description: Unassign all global callbacks</p>
+<hr>
+<p>Function: run (Class: er2)<br>Description: Execute an external file without stopping execution of current scrip. External file must be placed within the folder ‘[mission folder]&#x2F;scripts&#x2F;general&#x2F;‘ or any subfolder<br>Returns: True if the new script have been executed correctly<br>Parameters:</p>
+<ul>
+<li>filePathName (string)</li>
+</ul>
+<hr>
+<p>Function: runEveryone (Class: er2)<br>Description: Run a script locally for every player in the match (or just for the user if it’s a SinglePlayer match).<br>External file must be placed within the folder ‘[mission folder]&#x2F;scripts&#x2F;general&#x2F;‘ or any subfolder<br>Parameters:</p>
+<ul>
+<li>fileSubPath (string)</li>
+<li>runOnJoin (bool)</li>
+</ul>
+<hr>
+<p>Function: runEveryoneOnce (Class: er2)<br>Description: Run a script locally for every player in the match making sure it was not executed before (or just for the user if it’s a SinglePlayer match).<br>External file must be placed within the folder ‘[mission folder]&#x2F;scripts&#x2F;general&#x2F;‘ or any subfolder<br>Returns: this function doesn’t return anything<br>Parameters:</p>
+<ul>
+<li>fileSubPath (string)</li>
+<li>runOnJoin (bool)</li>
+</ul>
+<hr>
+<p>Function: runOnce (Class: er2)<br>Description: Execute an external file without stopping execution of current scrip, if the external file was never executed before during the mission. External file must be placed within the folder ‘[mission folder]&#x2F;scripts&#x2F;general&#x2F;‘ or any subfolder<br>Returns: True if the new script have been executed correctly. If the script was already executed previously during the same mission, it will not be Executed and the function will return False<br>Parameters:</p>
+<ul>
+<li>filePathName (string)</li>
+</ul>
+<hr>
+<p>Function: setCallback (Class: er2)<br>Description: register a global callback on a specific event Id. Only a callback can be tied to an event Id, so when this is called again on the same Id, the new callback reference will override previous one.<br>Callback Ids are specified at this page.<br>Returns: True if the callback was correctly set<br>Parameters:</p>
+<ul>
+<li>callback_id (string)</li>
+<li>callback_fnc (function)</li>
+</ul>
+<hr>
+<p>Function: setPhase (Class: er2)<br>Description: Changes the current phase to the one of index order<br>Returns: Returns false if it doesn’t exist<br>Parameters:</p>
+<ul>
+<li>phase_index (integer)</li>
+</ul>
+<hr>
+<p>Function: setRaining (Class: er2)<br>Description: Activates the rain on the map.<br>To synchronize the weather changes to other clients you can use synchWeather.</p>
+<hr>
+<p>Function: setSnowing (Class: er2)<br>Description: Activates the snow on the map.<br>To synchronize the weather changes to other clients you can use synchWeather.</p>
+<hr>
+<p>Function: setTaskTextDefenders (Class: er2)<br>Description: Set task text for defenders<br>Parameters:</p>
+<ul>
+<li>text (string)</li>
+</ul>
+<hr>
+<p>Function: setTaskTextInvaders (Class: er2)<br>Description: Set task text for invaders<br>Returns: this function doesn’t return anything<br>Parameters:</p>
+<ul>
+<li>text (string)</li>
+</ul>
+<hr>
+<p>Function: setTimeAndWeather (Class: er2)<br>Description: Sets the current time of day of the mission and some weather conditions, like clouds, snow and fog.<br>To synchronize the weather changes to other clients you can use synchWeather.</p>
+<p>NOTE: This function it’s CPU heavy<br>Parameters:</p>
+<ul>
+<li>hour (integer)</li>
+<li>minute (integer)</li>
+<li>cloudsAmount (float)</li>
+<li>snowAmount (float)</li>
+<li>fogAmount (float)</li>
+</ul>
+<hr>
+<p>Function: setTimeOfDay (Class: er2)<br>Description: Sets the current time of day of the mission. NOTE: This function is CPU heavy<br>Parameters:</p>
+<ul>
+<li>hour (integer)</li>
+<li>minute (integer)</li>
+</ul>
+<hr>
+<p>Function: setVictoryDefenders (Class: er2)<br>Description: Concludes the mission declaring defenders as winners</p>
+<hr>
+<p>Function: setVictoryInvaders (Class: er2)<br>Description: Concludes the mission declaring invaders as winners</p>
+<hr>
+<p>Function: showObjective (Class: er2)<br>Description: Display a new objective text<br>Parameters:</p>
+<ul>
+<li>title (string)</li>
+<li>message (string)</li>
+</ul>
+<hr>
+<p>Function: synchWeather (Class: er2)<br>Description: Apply the weather changes to all clients. Must be called on Master Client.<br>After calling this, set weather is automatically applied for newly connected clients.<br>Calling it too often can result in high network traffic and mission crash.</p>
+<hr>
+<p>Function: time (Class: er2)<br>Description: Time in seconds since the start of the execution of the game. The value is linear and doesn’t take into account pausing, slowing down or speeding up game time<br>Returns: Time in seconds since the game have been launched</p>
+<hr>
+<p>Function: timeScaled (Class: er2)<br>Description: Scaled time in seconds since the start of the execution of the game. If the game is paused the count of the time doesn’t increase. If the game is speeding up or slowing down this variable also increases with a proportional rate<br>Returns: Scaled-time in seconds since the game have been launched</p>
+<hr>
+<p>Function: triggerCallback (Class: er2)<br>Description: Force the triggering of a callback set trough setCallback<br>Returns: True if the callback was correctly triggered<br>Parameters:</p>
+<ul>
+<li>callback_id (string)</li>
+<li>params (any)</li>
+</ul>
+<hr>
+<p>Function: get (Class: global)<br>Description: Get the value of a stored global variable<br>Returns: The variable that was stored. Expected types: bool, float, int, string.<br>If the variable was never set, returns nil.<br>Parameters:</p>
+<ul>
+<li>var_id (string)</li>
+</ul>
+<hr>
+<p>Function: myplayerget (Class: global)<br>Description: Get the value of a stored global variable by my player.<br>Returns: The variable that was stored. Expected types: bool, float, int, string.<br>If the variable was never set, returns nil.<br>Parameters:</p>
+<ul>
+<li>var_id (string)</li>
+</ul>
+<hr>
+<p>Function: myplayerset (Class: global)<br>Description: Set a global variable for my network player that can be referenced from any script and by any player in the room.<br>If another player sets a variable with the same id, it won’t compromise my variable.<br>Parameters:</p>
+<ul>
+<li>variable (any)</li>
+<li>var_id (any)</li>
+</ul>
+<hr>
+<p>Function: playerget (Class: global)<br>Description: Get the value of a stored global variable by a specific player.<br>Returns: The variable that was stored. Expected types: bool, float, int, string.<br>If the variable was never set, returns nil.<br>Parameters:</p>
+<ul>
+<li>var_id (string)</li>
+<li>player_id (string)</li>
+</ul>
+<hr>
+<p>Function: set (Class: global)<br>Description: Set a global variable that can be referenced from any script and by any player in the room<br>Parameters:</p>
+<ul>
+<li>variable (any)</li>
+<li>var_id (string)</li>
+</ul>
+<hr>
+<p>Function: canControl (Class: Objective)<br>Description: Check if user can change the objective data, such as objective name, completition value, radius, icon and position.<br>Usually this correspond to the Master Client<br>Returns: True whenever the user can edit Mission Objective data</p>
+<hr>
+<p>Function: complete (Class: Objective)<br>Description: Set the conquer progress of the Scripted Mission Objective to 1 (max). Equivalent of Objective.setProgress(1).<br>Just like any other Mission Objective property, it doesn’t work with Conquer Area Objective, or any other Vanilla objective type, but only with Scripted Mission Objective spawned with spawnMissionObjective call.<br>Notice: When all the objectives in a Mission Phase are completed (progress &#x3D; 1) the Next Phase is automatically triggered<br>Returns: this function doesn’t return anything</p>
+<hr>
+<p>Function: getPosition (Class: Objective)<br>Description: Get the world position of the Mission Objective<br>Returns: World position of the Mission Objective</p>
+<hr>
+<p>Function: getProgress (Class: Objective)<br>Description: Get the progress of a Mission Objective. A value equals to 1 means that the Objective have been completed. When all Objectives in a Mission Phase are completed, the match pass automatically to the Next Phase<br>Returns: A value in the range of [0,..,1] where 1 means completed.</p>
+<hr>
+<p>Function: getRadius (Class: Objective)<br>Description: Get the area radius of the Mission Objective<br>Returns: Radius of the mission objective in meters</p>
+<hr>
+<p>Function: getUniqueId (Class: Objective)<br>Description: Get unique identifier for the objective. This is useful to check if an objective already exist, or to find specific objective with findObjective, especially across the network or between different phases.<br>Returns: A unique ID for the unit, Nil if not found.</p>
+<hr>
+<p>Function: isAttractor (Class: Objective)<br>Description: Check if a Mission Objective will attract default AI to fight on the area for at least a faction, or optionally, for a specific one.<br>Returns: Usually this is always true, except for Scripted Mission Objective where the attractor functionality has been disabled<br>Parameters:</p>
+<ul>
+<li>faction (string)</li>
+</ul>
+<hr>
+<p>Function: isCompleted (Class: Objective)<br>Description: Check whenever a Mission Objective progress is complete (check if Objective.getProgress &gt;&#x3D; 1).<br>Notice: When all the Mission Objectives in the current Mission Phase are marked as completed, the Next Phase will automatically be triggered<br>Returns: True if the Mission Objective progress is at max value (1)</p>
+<hr>
+<p>Function: isInside (Class: Objective)<br>Description: Check whenever a vec3() position is inside a specific Mission Objective, specifically within it’s radius from it’s center position<br>Returns: True if the position falls inside the Mission Objective radius<br>Parameters:</p>
+<ul>
+<li>position_to_check (vec3)</li>
+<li>resized (float)</li>
+</ul>
+<hr>
+<p>Function: isScripted (Class: Objective)<br>Description: Check if a Mission Objective is a scriptable one 8Scripted Mission Objective spawned with spawnMissionObjective call), where it is possible to control all the data<br>Returns: True if the mission objective is a scriptable one, spawned with spawnMissionObjective call. False if it’s a Conquer Area Mission Objective or other vanilla Mission Objectives.</p>
+<hr>
+<p>Function: remove (Class: Objective)<br>Description: Remove this objective from the current Mission Phase. Just like setting properties, only the master client can call do this operation<br>Returns: this function doesn’t return anything</p>
+<hr>
+<p>Function: resetIconDefenders (Class: Objective)<br>Description: Unset the icon of a Scripted Mission Objective specifically for the defenders faction, making it using the same icon as the attackers.<br>This function impacts network performance during online gameplay, so don’t call it too often.<br>When this icon gets unset, the defenders will share the same icon as the attackers, which is assigned with setIcon</p>
+<hr>
+<p>Function: setAttractor (Class: Objective)<br>Description: Enable or disable the attractor feature of the Scripted Mission Objective for both factions. When enabled, default AI will try to reach and fight inside the area. Optionally can change the effect for one faction only<br>Parameters:</p>
+<ul>
+<li>set_attractor (bool)</li>
+<li>faction (string)</li>
+</ul>
+<hr>
+<p>Function: setIcon (Class: Objective)<br>Description: Update the icon of a Scripted Mission Objective from the icon Id.<br>This function impacts network performance during online gameplay, so don’t call it too often.<br>Possible Ids are:<br>“0”: Conquer area icon.<br>“1”: Defend area icon.<br>“2”: Clear area icon.<br>“3”: Destroy AT gun icon.<br>“4”: Destroy vehicle icon.<br>“5”: Important area icon.</p>
+<p>Returns: this function doesn’t return anything<br>Parameters:</p>
+<ul>
+<li>icon_id (integer)</li>
+</ul>
+<hr>
+<p>Function: setIconDefenders (Class: Objective)<br>Description: Update the icon of a Scripted Mission Objective from the icon Id, specifically for the defenders faction.<br>This function impacts network performance during online gameplay, so don’t call it too often.<br>When this icon gets unset, the defenders will share the same icon as the attackers, which is assigned with setIcon<br>Parameters:</p>
+<ul>
+<li>icon_id (integer)</li>
+</ul>
+<hr>
+<p>Function: setPosition (Class: Objective)<br>Description: Update the world position of a Scripted Mission Objective<br>Parameters:</p>
+<ul>
+<li>world_pos (vec3)</li>
+</ul>
+<hr>
+<p>Function: setProgress (Class: Objective)<br>Description: Set the conquer progress of the Scripted Mission Objective. Just like any other Mission Objective property, it doesn’t work with Conquer Area Objective, or any other Vanilla objective type, but only with Scripted Mission Objective spawned with spawnMissionObjective call.<br>Notice: When all the objectives in a Mission Phase are completed (progress &#x3D; 1) the Next Phase is automatically triggered<br>Parameters:</p>
+<ul>
+<li>set_progress (float)</li>
+</ul>
+<hr>
+<p>Function: setRadius (Class: Objective)<br>Description: Update the area radius of a Scripted Mission Task<br>Parameters:</p>
+<ul>
+<li>area_radius (float)</li>
+</ul>
+<hr>
+<p>Function: setText (Class: Objective)<br>Description: Update the text of a Scripted Mission Objective. The text is displayed when inside the Mission Objective radius.<br>This function impacts network performance during online gameplay, so don’t call it too often<br>Parameters:</p>
+<ul>
+<li>new_text (string)</li>
+</ul>
+<hr>
+<p>Function: setTextDefenders (Class: Objective)<br>Description: Update the text of a Scripted Mission Objective for the Defenders. The text is displayed when inside the Mission Objective radius.<br>If this function is never called, the defenders will see the same text as the invaders.<br>This function impacts network performance during online gameplay, so don’t call it too often.<br>Parameters:</p>
+<ul>
+<li>defenders_text (string)</li>
+</ul>
+<hr>
+<p>Function: addAmmo (Class: Soldier)<br>Description: Adds an ammo box to the soldier’s invetory<br>Returns: Returns true if the ammo box has been added to the soldier’s inventory successfully<br>Parameters:</p>
+<ul>
+<li>ammo_id (string)</li>
+<li>ammo_count (integer)</li>
+</ul>
+<hr>
+<p>Function: addMagazine (Class: Soldier)<br>Description: Adds a magazine to the soldier’s invetory.<br>Returns: Returns true if the magazine has been added succesfully.</p>
+<p>Parameters:</p>
+<ul>
+<li>mag_id (string)</li>
+<li>ammo_count (integer)</li>
+</ul>
+<hr>
+<p>Function: addNewItem (Class: Soldier)<br>Description: Adds an item to the soldier’s inventory<br>Returns: Returns true if the item has been added to the soldier’s inventory successfully<br>Parameters:</p>
+<ul>
+<li>itemID (string)</li>
+<li>wear (bool)</li>
+</ul>
+<hr>
+<p>Function: alertFor (Class: Soldier)<br>Description: Puts the soldier in an alert state for a defined time<br>Parameters:</p>
+<ul>
+<li>time (float)</li>
+</ul>
+<hr>
+<p>Function: applyBleeding (Class: Soldier)<br>Description: Applies bleed status to the soldier</p>
+<hr>
+<p>Function: boardVehicle (Class: Soldier)<br>Description: Order the soldier to approach and borar onto the specified vehicle if available.<br>Parameters:</p>
+<ul>
+<li>veh (Vehicle)</li>
+</ul>
+<hr>
+<p>Function: canSwitchSeat (Class: Soldier)<br>Description: Check if the soldier is ready to switch seat. Usually this happens when a soldier is not busy with enteirng or leaving the vehicle with an animation.<br>Returns: Returns true the soldier is ready to switch to another seat</p>
+<hr>
+<p>Function: carryBody (Class: Soldier)<br>Description: Force the soldier to carry a another incapacitated soldier<br>Parameters:</p>
+<ul>
+<li>soldierToCarry (Soldier)</li>
+</ul>
+<hr>
+<p>Function: damageSoldier (Class: Soldier)<br>Description: Apply damage to a soldier<br>Parameters:</p>
+<ul>
+<li>damageAmount (float)</li>
+</ul>
+<hr>
+<p>Function: decreaseStamina (Class: Soldier)<br>Description: Decreases soldier’s stamina<br>Parameters:</p>
+<ul>
+<li>amount (integer)</li>
+</ul>
+<hr>
+<p>Function: disableHitByVehicleFor (Class: Soldier)<br>Description: Disable receiving damage from impacts with vehicles for some time<br>Parameters:</p>
+<ul>
+<li>time (float)</li>
+</ul>
+<hr>
+<p>Function: doingMelee (Class: Soldier)<br>Description: Check if the soldier is doing a melee attack<br>Returns: Returns true if the soldier is doing a melee attack</p>
+<hr>
+<p>Function: executeOrdersRoutine (Class: Soldier)<br>Description: Executes the routine to process squad orders for the soldier.</p>
+<hr>
+<p>Function: findCover (Class: Soldier)<br>Description: Finds a cover position near a specified position within a given radius.<br>Parameters:</p>
+<ul>
+<li>position (vec3)</li>
+<li>radius (float)</li>
+</ul>
+<hr>
+<p>Function: forceTarget (Class: Soldier)<br>Description: Force a Soldier to target a specific Soldier or Vehicle.</p>
+<p>User Request to generate: this is a test request to generate a new function.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">はつづき</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2025/09/17/Easy%20red2%E8%84%9A%E6%9C%AC%E6%8F%90%E7%A4%BA%E8%AF%8D/">http://example.com/2025/09/17/Easy%20red2%E8%84%9A%E6%9C%AC%E6%8F%90%E7%A4%BA%E8%AF%8D/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Hexo/">Hexo</a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2024/12/03/%E8%BF%99%E6%98%AF%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" title="这是第一篇测试文章"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">这是第一篇测试文章</div></div><div class="info-2"><div class="info-item-1">如何在 Hexo 博客中创建新文章在 Hexo 博客中创建和发布新文章非常简单，让我们一步步来学习这个过程。 1. 创建新文章在博客项目目录下，使用命令行输入以下命令： 1hexo new &quot;文章标题&quot;  这个命令会在 source/_posts 目录下创建一个新的 Markdown 文件。 2. 编辑文章创建文件后，你可以使用任何文本编辑器打开并编辑文章。文章开头的部分称为”Front-matter”，包含了文章的基本信息：yamltitle: 文章标题date: 创建日期tags: [标签1, 标签2]categories: 分类名称3. 生成静态文件编辑完成后，运行以下命令生成静态文件： 1hexo generate  4. 本地预览你可以在本地预览你的博客，确保文章显示正常： 1hexo server  然后在浏览器中访问 http://localhost:4000 查看效果。 5. 发布文章最后，你可以将文章发布到你的远程仓库： 1hexo deploy  Markdown 语法小贴士以下是一些常用的 Markdown 语法示例： 标题使用 #...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2024/12/03/%E8%BF%99%E6%98%AF%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" title="这是第一篇测试文章"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-03</div><div class="info-item-2">这是第一篇测试文章</div></div><div class="info-2"><div class="info-item-1">如何在 Hexo 博客中创建新文章在 Hexo 博客中创建和发布新文章非常简单，让我们一步步来学习这个过程。 1. 创建新文章在博客项目目录下，使用命令行输入以下命令： 1hexo new &quot;文章标题&quot;  这个命令会在 source/_posts 目录下创建一个新的 Markdown 文件。 2. 编辑文章创建文件后，你可以使用任何文本编辑器打开并编辑文章。文章开头的部分称为”Front-matter”，包含了文章的基本信息：yamltitle: 文章标题date: 创建日期tags: [标签1, 标签2]categories: 分类名称3. 生成静态文件编辑完成后，运行以下命令生成静态文件： 1hexo generate  4. 本地预览你可以在本地预览你的博客，确保文章显示正常： 1hexo server  然后在浏览器中访问 http://localhost:4000 查看效果。 5. 发布文章最后，你可以将文章发布到你的远程仓库： 1hexo deploy  Markdown 语法小贴士以下是一些常用的 Markdown 语法示例： 标题使用 #...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">はつづき</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Easy-red2%E8%84%9A%E6%9C%AC%E6%8F%90%E7%A4%BA%E8%AF%8D-%E4%BB%A5%E4%B8%8B%E4%B8%BA%E6%AD%A3%E6%96%87-%E6%96%B9%E4%BE%BF%E5%A4%8D%E5%88%B6%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">Easy red2脚本提示词 以下为正文 方便复制使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Easy-Red-2-Scripting-API"><span class="toc-number">1.1.</span> <span class="toc-text">Easy Red 2 Scripting API:</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/17/Easy%20red2%E8%84%9A%E6%9C%AC%E6%8F%90%E7%A4%BA%E8%AF%8D/" title="Easy red2脚本提示词">Easy red2脚本提示词</a><time datetime="2025-09-17T08:11:00.000Z" title="Created 2025-09-17 16:11:00">2025-09-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/12/03/%E8%BF%99%E6%98%AF%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" title="这是第一篇测试文章">这是第一篇测试文章</a><time datetime="2024-12-03T15:11:31.000Z" title="Created 2024-12-03 23:11:31">2024-12-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/25/hello-world/" title="Hello World">Hello World</a><time datetime="2024-11-25T08:49:43.590Z" title="Created 2024-11-25 16:49:43">2024-11-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By はつづき</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
